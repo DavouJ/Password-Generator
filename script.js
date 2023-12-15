@@ -101,6 +101,8 @@ const upperCasedCharacters = [
   'Z'
 ];
 
+var generatedPass = ""
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
@@ -131,7 +133,7 @@ function getPasswordOptions() {
     }
 
     passCharacteristics = {
-      length: passLength,
+      passLength: passLength,
       caps: hasCaps,
       nonCaps: hasNoneCaps,
       special: hasSpecial,
@@ -145,39 +147,60 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-  getRandomInt(3)
+
+  // let randElement = 
+
+  alert(arr)
+  console.log(arr.length)
+
+  //alert(arr[getRandomInt[8]])
+
+  //alert(randElement)
+  //return randElement
 
 }
 
 // Function to generate password with user input
 function generatePassword() {
   let passCharacteristics = getPasswordOptions()
-  let randomCharArr = []
-  
+  let randomCharArr = [0]
+  let guaranteedCharArr = [0]
+  let passArr = []
   if(passCharacteristics.caps === true){
-    alert('in the caps condition')
-    randomCharArr.push(upperCasedCharacters)
-    
+    for(let i = 0; i < upperCasedCharacters.length; i++){
+      randomCharArr.push(upperCasedCharacters[i])
+    }
+    guaranteedCharArr[0] = upperCasedCharacters[getRandomInt(upperCasedCharacters.length)]
   }
   if(passCharacteristics.nonCaps === true){
-    alert('in the non condition')
-    randomCharArr.push(lowerCasedCharacters)
-    
+    for(let i = 0; i < lowerCasedCharacters.length; i++){
+      randomCharArr.push(lowerCasedCharacters[i])
+    }
+    guaranteedCharArr[1] = lowerCasedCharacters[getRandomInt(lowerCasedCharacters.length)]
   }
   if(passCharacteristics.num === true){
-    alert('in the num condition')
-    randomCharArr.push(numericCharacters)
-    
+    for(let i = 0; i < numericCharacters.length; i++){
+      randomCharArr.push(numericCharacters[i])
+    }
+    guaranteedCharArr[2] = numericCharacters[getRandomInt(numericCharacters.length)]
   }
   if(passCharacteristics.special === true){
-    alert('in the special condition')
-    randomCharArr.push(specialCharacters)
-    
+    for(let i = 0; i < specialCharacters.length; i++){
+      randomCharArr.push(specialCharacters[i])
+    }
+    guaranteedCharArr[3] = specialCharacters[getRandomInt(specialCharacters.length)]
   }
   
-  for(let i = 0; i<randomCharArr.length; i++){
-    alert(randomCharArr[i])
-  }
+  console.log(randomCharArr)
+  // for(let i = 0; i < passCharacteristics.passLength; i++){
+  //   passArr[i] = getRandom(randomCharArr)
+  // }
+
+  //alert(passArr.length)
+  
+
+
+
 
 
   
