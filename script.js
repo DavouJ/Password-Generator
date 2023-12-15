@@ -104,7 +104,7 @@ const upperCasedCharacters = [
 var generatedPass = ""
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+  return Math.floor(Math.random() * max)
 }
 
 // Function to prompt user for password options
@@ -147,17 +147,7 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
-  // let randElement = 
-
-  alert(arr)
-  console.log(arr.length)
-
-  //alert(arr[getRandomInt[8]])
-
-  //alert(randElement)
-  //return randElement
-
+  return arr[Math.floor(Math.random() * arr.length)]
 }
 
 // Function to generate password with user input
@@ -191,12 +181,11 @@ function generatePassword() {
     guaranteedCharArr[3] = specialCharacters[getRandomInt(specialCharacters.length)]
   }
   
-  console.log(randomCharArr)
-  // for(let i = 0; i < passCharacteristics.passLength; i++){
-  //   passArr[i] = getRandom(randomCharArr)
-  // }
+  for(let i = 3; i < passCharacteristics.passLength; i++){
+    passArr[i] = getRandom(randomCharArr)
+  }
 
-  //alert(passArr.length)
+passArr[getRandomInt[passArr.length]]
   
 
 
