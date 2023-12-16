@@ -102,6 +102,7 @@ const upperCasedCharacters = [
 ];
 
 var generatedPass = ""
+var passArr = []
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max)
@@ -153,9 +154,13 @@ function getRandom(arr) {
 // Function to generate password with user input
 function generatePassword() {
   let passCharacteristics = getPasswordOptions()
-  let randomCharArr = [0]
-  let guaranteedCharArr = [0]
-  let passArr = []
+  let randomCharArr = []
+  let guaranteedCharArr = []
+  let randIndx1 = 0
+  let randIndx2 = 0
+  let randIndx3 = 0
+  let randIndx4 = 0
+  
   if(passCharacteristics.caps === true){
     for(let i = 0; i < upperCasedCharacters.length; i++){
       randomCharArr.push(upperCasedCharacters[i])
@@ -181,18 +186,36 @@ function generatePassword() {
     guaranteedCharArr[3] = specialCharacters[getRandomInt(specialCharacters.length)]
   }
   
-  for(let i = 3; i < passCharacteristics.passLength; i++){
+  for(let i = 0; i < passCharacteristics.passLength; i++){
     passArr[i] = getRandom(randomCharArr)
+   
+  }
+  
+
+  while(randIndx1 === randIndx2 || randIndx1 === randIndx3 || randIndx1 === randIndx4 || randIndx2 === randIndx3 || randIndx2 === randIndx4 || randIndx3 === randIndx4){
+    randIndx1 = getRandomInt(passArr.length)
+    randIndx2 = getRandomInt(passArr.length)
+    randIndx3 = getRandomInt(passArr.length)
+    randIndx4 = getRandomInt(passArr.length)
   }
 
-passArr[getRandomInt[passArr.length]]
   
-
-
-
-
-
   
+  passArr[randIndx1] = guaranteedCharArr[0]
+  console.log(`putting ${guaranteedCharArr[0]} in ${randIndx1}`)
+  passArr[randIndx2] = guaranteedCharArr[1]
+  console.log(`putting ${guaranteedCharArr[1]} in ${randIndx2}`)
+  passArr[randIndx3] = guaranteedCharArr[2]
+  console.log(`putting ${guaranteedCharArr[2]} in ${randIndx3}`)
+  passArr[randIndx4] = guaranteedCharArr[3]
+  console.log(`putting ${guaranteedCharArr[3]} in ${randIndx4}`)
+  
+  alert(passArr)
+  generatedPass = passArr.toString()
+  
+  console.log(generatedPass.replace(/,/g,""))
+  return generatedPass.replace(/,/g,"")
+
 }
 
 // Get references to the #generate element
