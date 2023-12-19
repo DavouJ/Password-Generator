@@ -116,7 +116,7 @@ function getPasswordOptions() {
   while(summary === false){
     let passLength = prompt("Enter a password length between 8 and 128")
     
-    while(passLength < 8 || passLength > 128){
+    while(passLength < 8 || passLength > 128 && passLength !== null){
       passLength = prompt(" Only enter a password length between 8 and 128")
     }
 
@@ -199,8 +199,6 @@ function generatePassword() {
     randIndx4 = getRandomInt(passArr.length)
   }
 
-  
-  
   passArr[randIndx1] = guaranteedCharArr[0]
   console.log(`putting ${guaranteedCharArr[0]} in ${randIndx1}`)
   passArr[randIndx2] = guaranteedCharArr[1]
@@ -210,7 +208,7 @@ function generatePassword() {
   passArr[randIndx4] = guaranteedCharArr[3]
   console.log(`putting ${guaranteedCharArr[3]} in ${randIndx4}`)
   
-  alert(passArr)
+
   generatedPass = passArr.toString()
   
   console.log(generatedPass.replace(/,/g,""))
@@ -223,11 +221,13 @@ const generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
+
+  let passText = "Your password is: \n\n"
   
   const password = generatePassword();
   const passwordText = document.querySelector('#password');
 
-  passwordText.value = password;
+  passwordText.value = passText + password;
 }
 
 // Add event listener to generate button
