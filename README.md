@@ -1,4 +1,4 @@
-# Password-Generator
+# Random-Password-Generator-Tool
 
 ## A random password generator
 
