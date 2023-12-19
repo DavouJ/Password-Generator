@@ -15,9 +15,9 @@ Application deployed via the live GitHub URL: https://davouj.github.io/Password-
 
 ## Usage
 
-An archive for my past and current projects.
+An tool to generate random passwords with customisable character and length options.
 
-![Gif of page](/assets/images/portfolioGif.gif)
+![Gif of page](./assets/images/pageGif.gif)
 
 ## Features
 
@@ -66,8 +66,9 @@ SOFTWARE.
 
 ## Badges CHANGE
 
-![badmath](https://img.shields.io/badge/HTML-42.6-blue)
-![badmath](https://img.shields.io/badge/CSS-57.4-orange)
+![badmath](https://img.shields.io/badge/JS-67.3-blue)
+![badmath](https://img.shields.io/badge/HTML-26.0-orange)
+![badmath](https://img.shields.io/badge/CSS-6.7-green)
 
 
 ## How to Contribute
