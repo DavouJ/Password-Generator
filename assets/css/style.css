@@ -1,14 +1,21 @@
 
 body{
-  background-color: #324254;
+  background-color: #7e8791;
+}
+.box{
+  
+  margin: 0 auto;
 }
 
-#card{
-  text-align: center;
+.card{
+  /* text-align: center; */
+  background-color: rgba(184, 140, 140, 0.7);
 }
+
 
 
 #password {
+  background-color: rgba(255, 255, 255, 0.453);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

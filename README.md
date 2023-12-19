@@ -11,7 +11,7 @@
 
 ## Deployment
 
-Application deployed via the live GitHub URL: https://davouj.github.io/Portfolio-Davou/.
+Application deployed via the live GitHub URL: https://davouj.github.io/Password-Generator/.
 
 ## Usage
 
