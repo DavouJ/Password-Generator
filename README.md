@@ -1,6 +1,6 @@
 # Random-Password-Generator-Tool
 
-## A random password generator
+## A random password generator 
 
 ## Table of Contents 
 
