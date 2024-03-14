@@ -11,7 +11,7 @@
 
 ## Deployment
 
-Application deployed via the live GitHub URL: https://davouj.github.io/Password-Generator/.
+Application deployed via the live GitHub URL: [https://davouj.github.io/Password-Generator/](https://davouj.github.io/Random-Password-Generator-Tool/).
 
 ## Usage
 
